@@ -4,6 +4,7 @@ import { EnvModuele } from './infra/env/env.module';
 import { ConfigModule } from '@nestjs/config';
 import { envSchema } from './infra/env/env';
 import { AuthModule } from './infra/auth/auth.module';
+import { SocialAuthModule } from './infra/auth/social-auth.module';
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { AuthModule } from './infra/auth/auth.module';
       isGlobal: true,
     }),
     AuthModule,
+    SocialAuthModule,
     HttpModule,
     EnvModuele,
   ],
